@@ -20,6 +20,7 @@ public class Hareket : MonoBehaviour
             if (Input.touchCount > 0 && EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) return; // touch over UI 
 
             Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+           //Ray _ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position); for mobile 
             RaycastHit hit;
             if (Physics.Raycast(_ray, out hit, 50f))
             {
